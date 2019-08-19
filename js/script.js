@@ -24,22 +24,18 @@ $(document).ready(function() {
       // });
 
     // >>>>>>  Uses Object  <<<<<<<<
-    var wordHolder;
+    var wordHolder = {};
     words.forEach(function(word,index){
       var firstIndex = words.indexOf(word);
       if (word && words[index+1] !== word){
-        console.log(word, typeof word);
         var count = (index - firstIndex) + 1;
-        try{
-          wordHolder[word] = count;
-        } catch (e){
-          console.log("error...");
-        }
+        wordHolder[`${word}`] = count;
       }
     });
 
-    Object.keys(words).forEach(function(countedWord){
-       $("#result-list").append("<li>" + countedWord + "</li>");
+    Object.keys(wordHolder).forEach(function(countedWord){
+      var value = wordHolder[countedWord];
+       $("#result-list").append("<li>" + countedWord + " : " + value +  "</li>");
     });
 
   });
