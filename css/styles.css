@@ -1,0 +1,35 @@
+body {
+  font-family: 'Spectral';
+  font-size: 19px;
+  color: white;
+  background-color: black;
+  z-index: 5;
+}
+
+button {
+  border-color: red;
+  background-color: black;
+  color: white;
+
+
+}
+
+#input {
+  border-color: #0226b8;
+  background-color: black;
+  color: white;
+
+}
+
+.title-img img {
+  height: 300px;
+  width: 400px;
+  position: relative;
+}
+
+#img-tilt img {
+  height: 300px;
+  width: 400px;
+  transform: rotate(300deg);
+  z-index: 0;
+}
